@@ -1,13 +1,13 @@
 import { useState } from 'react'
 
-export function NewTodoForm( {onSubmit }){
+export function NewTodoForm( {onSub }){
   const [newItem, setNewItem] = useState('')
 
   function handleSubmit(e){
     e.preventDefault()
     if (newItem === '')return
 
-    onSubmit(newItem)
+    onSub(newItem)
 
     setNewItem('')
   }
@@ -19,7 +19,7 @@ export function NewTodoForm( {onSubmit }){
         <input 
           value={newItem} 
           onChange={e=>setNewItem(e.target.value)} 
-          type="text" name="item" id="item" 
+          type="text"  id="item" 
         />
       </div>
       <button className="btn">Add</button>
